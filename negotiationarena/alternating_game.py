@@ -74,7 +74,7 @@ class AlternatingGame(Game):
         response,
     ):
         try:
-            agent_message = self.game_interface.parse(response)
+            agent_message = SimpleGameDefaultParser.parse(response)
         except Exception as e:
             print("response : {}".format(response))
             raise e
